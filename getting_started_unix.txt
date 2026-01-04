@@ -1,0 +1,37 @@
+##### INSTALLATION GUIDE #####
+- Debian has a hercules (emulates IBM mainframe) install
+- c3270: emulates IBM display stations
+
+cmd:
+sudo apt-get install hercules unrar c3270
+
+create dir:
+/mvs/downloads
+
+cmd:
+wget https://www.jaymoseley.com/hercules/downloads/archives/vs2StarterTapes.tar.gz
+wget https://www.jaymoseley.com/hercules/downloads/archives/vs2DistributionTapes.tar.gz
+wget https://www.jaymoseley.com/hercules/downloads/archives/mvsInstallationResources.tar.gz
+
+cmd:
+tar tzf downloads/mvsInstallationResources.tar.gz
+
+extract cmd:
+tar xzf downloads/mvsInstallationResources.tar.gz
+
+cmd:
+cd /mvs/tape
+tar xzf ../downloads/vs2DistributionTapes.tar.gz
+
+cmd:
+cat > submit.sh << "__EOF__"
+
+cat > submit.sh << "__EOF__"
+> #!/bin/sh
+> 
+> nc -w1 localhost 3505 < $1
+> __EOF__
+
+youtube:
+https://www.youtube.com/watch?v=ONAEtUEEn78
+[19:37]
