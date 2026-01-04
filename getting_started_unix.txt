@@ -23,7 +23,7 @@ cmd:
 cd /mvs/tape
 tar xzf ../downloads/vs2DistributionTapes.tar.gz
 
-cmd:
+cmd []:
 cat > submit.sh << "__EOF__"
 
 cat > submit.sh << "__EOF__"
@@ -32,6 +32,33 @@ cat > submit.sh << "__EOF__"
 > nc -w1 localhost 3505 < $1
 > __EOF__
 
+cmd [install rexx]:
+sudo apt install regina-rexx
+
+cmd [make executabgle files]:
+chmod +x condcode.rexx create.dasd.sh submit.sh
+
+cmd [create volume]:
+./create.dasd.sh starter
+
+cmd []:
+hercules -f conf/ibcdmprs.cnf
+
+cmd []:
+telnet localhost 3270
+
 youtube:
-https://www.youtube.com/watch?v=ONAEtUEEn78
-[19:37]
+[PART 1] https://www.youtube.com/watch?v=ONAEtUEEn78
+[PART 2] https://www.youtube.com/watch?v=0vEED3AN6TI
+
+##### EASY MODE #####
+unzip tk4-_v1.00_current-v05.zip
+
+cd unattended
+cd mainframe/unattended/
+./set_console_mode
+cd ..
+./mvs
+
+# to display emulator #
+c3270 localhost:3270
