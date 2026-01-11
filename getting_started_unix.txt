@@ -59,6 +59,11 @@ cd mainframe/unattended/
 ./set_console_mode
 cd ..
 ./mvs
+press "ESC" to see the system resources
 
 # to display emulator #
 c3270 localhost:3270
+press "F3" to enter the TSO prompt
+type in "tsoappls" to return the to menu
+type in "logoff" to log off the mainframe
+type in "shutdown" to turn off the system
