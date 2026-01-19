@@ -13,3 +13,17 @@ ISPF: interactive system productivity facility
 
 listds: list dataset (shows properties)
 listalc: show all files allocated in mainframe
+help: show list of all commands available
+logoff: current user exits the TSO session
+cntl + a: attention interrupt key
+
+### TSO OPERATING MODES ###
+foreground mode: interact directly witht he TSO using commands
+background mode: TSO commands are run independent of the user
+
+when running the "edit" command, there are subcommands like:
+list: show content in dataset
+press "enter" and enter data
+type "save"
+type "list" to view the data set
+type "end" to exit the edit mode
